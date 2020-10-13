@@ -1,0 +1,609 @@
+@charset "utf-8";
+
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	position: relative;
+}
+
+
+/* Header
+--------------------------------------------------------------------------------------------------------------- */
+#header{}
+
+#header #logo{margin:30px 0 0 0;}
+#header #logo h1{margin:0; padding:0px; font-size:16px;}
+
+
+/* Page Intro
+--------------------------------------------------------------------------------------------------------------- */
+#pageintro{padding:250px 0;}
+
+#pageintro article{display:block; padding-left:0 }
+#pageintro .heading{
+	margin-bottom:50px; 
+	font-family: Roboto;
+ 	font-size: 75px;
+  	font-weight: bold;
+   	font-stretch: normal;
+  	font-style: normal;
+  	line-height: normal;
+  	letter-spacing: normal;
+  	text-align: center;
+  	color: #ffffff;}
+#pageintro p{
+	font-size:1.1rem; line-height:2;
+	opacity: 0.7;
+	font-family: Roboto;
+	font-size: 20px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.4;
+	letter-spacing: normal;
+	text-align: center;
+	color: #ffffff;
+	max-width: 44%;
+	padding-left: 25%;	
+	}
+#pageintro footer{margin-top:50px;}
+
+
+/* Content Area
+--------------------------------------------------------------------------------------------------------------- */
+.container{padding:80px 0;}
+
+.sectiontitle{display:block; max-width:55%; margin:0 auto 80px; text-align:center;}
+.sectiontitle *{margin:0;}
+
+/*For Section 2 sizing ------------*/  
+
+
+.overview{margin-bottom:80px;}
+.overview > li{margin-bottom:50px;}
+.overview > li:nth-last-child(-n+3){margin-bottom:0;}/* Removes bottom margin from the last three items - margin is restored in the media queries when items stack */
+.overview > li:nth-child(3n+1){margin-left:0; clear:left;}/* Removes the need to add class="first" */
+.overview article{display:block; position:relative; padding:0 0 0 70px;}
+.overview article *{margin:0; padding:0;}
+.overview article i{display:inline-block; position:absolute; top:0; left:0; width:50px; overflow:hidden; line-height:1; font-size:36px;}
+.overview article .heading, .overview article p{margin-bottom:20px;}
+
+
+/* Copyright
+--------------------------------------------------------------------------------------------------------------- */
+#copyright{padding:20px 0;}
+#copyright *{margin:0; padding:0;background-color: }
+
+/* Navigation
+--------------------------------------------------------------------------------------------------------------- */
+nav ul, nav ol{margin:0; padding:0; list-style:none;}
+#mainav, nav{line-height:normal;}
+
+
+/* Top Navigation */
+#mainav{}
+#mainav ul{text-transform:uppercase;}
+#mainav ul ul{z-index:9999; position:absolute; width:180px; text-transform:none;}
+#mainav ul ul ul{left:180px; top:0;}
+#mainav li{display:inline-block; position:relative; margin:0 15px 0 0; padding:0;}
+#mainav li:last-child{margin-right:0;}
+#mainav li li{width:100%; margin:0;}
+#mainav li a{display:block; padding:30px 0;}
+#mainav li li a{border:solid; border-width:0 0 1px 0;}
+#mainav .drop{padding-left:15px;}
+#mainav li li a, #mainav li li .drop{display:block; margin:0; padding:10px 15px;}
+#mainav .drop::after, #mainav li li .drop::after{content:"\f0d7";}
+#mainav .drop::after{top:35px; left:5px;}
+#mainav li li .drop::after{top:15px; left:5px;}
+#mainav ul ul{visibility:hidden; opacity:0;}
+#mainav ul li:hover > ul{visibility:visible; opacity:1;}
+
+/* Back to Top */
+#backtotop{z-index:999; display:inline-block; position:fixed; visibility: visible ; bottom:20px; right:20px; width:36px; height:36px; line-height:36px; font-size:16px; text-align:center; opacity:.2;}
+#backtotop i{display:block; width:100%; height:100%; line-height:inherit;}
+#backtotop.visible{visibility:visible; opacity:1;}
+#backtotop:hover{opacity:1;}
+#backtotop{color:white; background-color:#27ad6c;}
+
+/* Colours
+--------------------------------------------------------------------------------------------------------------- */
+body{color:#7A7A7A; background-color:#FFFFFF;}
+
+.overlay{color:#FFFFFF; background-color:inherit;}
+.overlay::after{color:inherit; background-color:rgba(0,10,0,.7);}
+
+
+.btn, .btn.inverse:hover{color:#FFFFFF; background-color:#27ad6c; border-color:#27ad6c;}
+.btn:hover, .btn.inverse{color:inherit; background-color:transparent; border-color:inherit;}
+
+.imgover:hover::before{background:rgba(0,0,0,.55);}
+.imgover, .imgover:hover::after{color:#FFFFFF;}
+
+
+/* Rows */
+.row0 {padding:10px;}
+.row1{background-color:rgba(0,0,0,0);}
+.row2{}
+.row3{color:#7A7A7A; background-color:#FFFFFF;}
+.row4{color:#7A7A7A; background-color:#F7F7F7;}
+.row5, .row5 a{color:#7A7A7A; background-color:#333333;}
+.row3 .heading, .row4 .heading{color:#27ad6c;}
+
+
+
+/* Navigation */
+#mainav li a{color:#FFFFFF;opacity: 0.7;}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color: #70c919; background-color:inherit;}
+#mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(0,0,0,.6); border-color:rgba(0,0,0,.3);}
+#mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#04DEE0;}
+#mainav form select{color:#FFFFFF; background-color:#000000; border-color:rgba(255,255,255,.3);}
+
+
+/* Media Queries
+--------------------------------------------------------------------------------------------------------------- */
+@-ms-viewport{width:device-width;}
+
+
+/* Max Wrapper Width - Laptop, Desktop etc.
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width:978px){
+	.hoc{max-width:90%;}
+}
+
+
+
+/* Other-------------------------------- */
+
+@media screen and (max-width:650px){
+	.scrollable{display:block; width:100%; margin:0 0 30px 0; padding:0 0 15px 0; overflow:auto; overflow-x:scroll;}
+	.scrollable table{margin:0; padding:0; white-space:nowrap;}
+
+	.inline li{display:block; margin-bottom:10px;}
+	.pushright li{margin-right:0;}
+
+}
+
+
+.article{
+	text-align: center;
+	
+}
+html{overflow-y:scroll; overflow-x:hidden;}
+html, body{margin:0; padding:0; font-size:14px; line-height:1.6em;}
+.center{text-align:center;}
+.nospace{margin:0; padding:0; list-style:none;}
+.overlay{position:relative; z-index:1;}
+.overlay::after{display:block; position:absolute; top:0; left:0; width:100%; height:100%; content:""; z-index:-1;}
+.bgtop{background-position:top center; background-repeat:no-repeat; background-size:cover;}
+
+.btn{
+	display:inline-block;
+	margin-left: 40%; 
+	padding:20px 48px 20px; 
+	text-transform:uppercase; 
+	border:1px solid;
+	border-radius: 4px;
+	box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.9);
+	background-color: #27ad6c;}
+
+.clear, .group{display:block;}
+.clear::before, .clear::after, .group::before, .group::after{display:table; content:"";}
+.clear, .clear::after, .group, .group::after{clear:both;}
+
+a{outline:none; text-decoration:none;}
+
+.fl_left{float:left; }
+.fl_right{float:right;}
+
+img{width:auto; max-width:100%; height:auto; margin:0; padding:0px; border:none; line-height:normal; vertical-align:middle;}
+
+
+/* Fonts
+--------------------------------------------------------------------------------------------------------------- */
+body, input, textarea, select{font-family: 'Roboto';}
+
+
+
+/* Forms
+--------------------------------------------------------------------------------------------------------------- */
+form, fieldset, legend{margin:0; padding:0; border:none;}
+legend{display:none;}
+label, input, textarea, select, button{display:block; resize:none; outline:none; color:inherit; font-size:inherit; font-family:inherit; vertical-align:middle;}
+label{margin-bottom:5px;}
+:required, :invalid{outline:none; box-shadow:none;}
+
+
+/* Generalise
+--------------------------------------------------------------------------------------------------------------- */
+h2{
+	font-family: Roboto;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+  color: white;
+}
+h3{
+	font-family: Roboto;
+  font-size: 48px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+  color: white;
+}
+h4{
+	font-family: Roboto;
+  font-size: 17px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+  color: #9b9b9b;
+}
+h1{
+	font-family:'Roboto';
+	font-size: 48px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1;
+	letter-spacing: normal;
+}
+h6{
+	font-family: Roboto;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #27ad6c;
+}
+
+.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left; word-wrap:break-word;}
+/*
+The "hoc" class is a generic class used to centre a containing element horizontally
+It should be used in conjunction with a second class or ID
+*/
+.hoc{display:block; margin:0 auto;}
+
+/* Grid
+--------------------------------------------------------------------------------------------------------------- */
+.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:inline-block; float:left; margin:0 0 0 3.06748466257669%; list-style:none;}
+
+.first{margin-left:0; clear:left;}
+
+.one_quarter{width:22.69938650306748%;}
+.one_third{width:31.28834355828221%;}
+.one_half, .two_quarter{width:48.46625766871166%;}
+.two_third{width:65.6441717791411%;}
+.three_quarter{width:74.23312883435584%;}
+
+
+/*SEARCH ICON HOVER EFFFECT*/
+:root {
+	 --line-thickness: 0.25em;
+	 --glass-size: 65%;
+	 --icon-height: 20px;
+	 --transition-speed: 0.35s;
+	 --timing-function: cubic-bezier(0.66, 1.51, 0.77, 1.13);
+	 --icon-color: white;
+
+}
+ * {
+	 box-sizing: border-box;
+	 margin: 0;
+	 padding: 0;
+}
+ body {
+	 background-repeat: no-repeat;
+	 background-attachment: fixed;
+}
+ .search-icon {
+	 box-sizing: border-box;
+	 width: var(--icon-height);
+	 height: 30px;
+	 max-width: 10em;
+	 transition: all var(--transition-speed) linear, border-color 0s linear var(--transition-speed);
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 margin: auto;
+	 border: solid var(--line-thickness);
+	 border-color: rgba(255, 255, 255, 0);
+	 border-radius: 100px;
+	 padding: 0.4em;
+}
+ .search-icon__wrapper {
+	 width: var(--icon-height);
+	 height: var(--icon-height);
+	 position: absolute;
+	 border-radius: 100px;
+	 top: 0;
+	 bottom: 0;
+	 right: 0;
+	 margin: auto 0;
+	 transform: rotate(-45deg);
+	 transition: all 0 linear;
+}
+ .search-icon__wrapper:hover {
+	 cursor: pointer;
+}
+ .search-icon__input {
+	 background: none;
+	 text-align: center;
+	 outline: none;
+	 display: block;
+	 border: none;
+	 background: rgba(255, 255, 255, 0);
+	 width: calc(100% - (var(--icon-height) / 2 + 1rem));
+	 margin-right: 6rem;
+	 height: 100%;
+	 border-radius: 100px;
+	 transition: all var(--transition-speed) linear;
+	 font-size: 15px;
+	 padding: 0 0.5em;
+	 color: white;
+}
+ .search-icon__input::placeholder {
+	 color: rgba(255, 255, 255, .75);
+}
+ .search-icon__glass {
+	 width: var(--glass-size);
+	 height: var(--glass-size);
+	 border: solid var(--line-thickness);
+	 border-color: var(--icon-color);
+	 border-radius: 100px;
+	 margin: 0 auto;
+	 position: relative;
+	 transition: all var(--transition-speed) var(--timing-function) var(--transition-speed), border-color 0s linear var(--transition-speed);
+}
+ .search-icon__handle {
+	 height: calc(100% - var(--glass-size));
+	 width: var(--line-thickness);
+	 margin: 0 auto;
+	 background: var(--icon-color);
+	 position: absolute;
+	 border-radius: 0 0 100px 100px;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 transition: all var(--transition-speed) var(--timing-function);
+	 transition-delay: var(--transition-speed);
+}
+ .search-icon__handle::after {
+	 content: "";
+	 display: block;
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 border-radius: inherit;
+	 background: var(--icon-color);
+	 transform: rotate(0deg);
+	 transition: all var(--transition-speed) var(--timing-function);
+	 transition-delay: 0s;
+}
+ .search-icon.open {
+	 width: calc(100vw - 1em);
+	 border-color: var(--icon-color);
+	 transition-delay: var(--transition-speed);
+}
+ .search-icon.open .search-icon__input {
+	 transition-delay: var(--transition-speed);
+}
+ .search-icon.open .search-icon__glass {
+	 width: 100%;
+	 height: 100%;
+	 transition: all var(--transition-speed) var(--timing-function) 0s, border-color 0s linear var(--transition-speed);
+	 border-color: rgba(0, 0, 0, 0);
+}
+ .search-icon.open .search-icon__handle {
+	 bottom: calc(50% - (100% - var(--glass-size)) / 2);
+	 border-radius: 100px;
+	 transition-delay: 0s;
+}
+ .search-icon.open .search-icon__handle::after {
+	 transition-delay: var(--transition-speed);
+	 transform: rotate(90deg);
+}
+
+/*table
+*/
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.tablebg {
+  padding: 0 25px 25px;
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 50px 0 0;
+  max-width: 960px;
+  width: 100%;
+}
+
+.panel {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px 25px;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 900px) {
+  .table {
+    flex-direction: row;
+  }
+}
+
+.table * {
+  text-align: left;
+}
+
+.tablecontent {
+  border-bottom: 1px solid #88c542;
+  padding: 25px;
+}
+
+.tablecontent:last-child {
+  border-bottom: none;
+}
+
+@media (min-width: 900px) {
+  .tablecontent {
+    border-bottom: none;
+    border-right: 1px solid #e1f1ff;
+    flex-basis: 100%;
+    padding: 25px 50px;
+  }
+
+  .tablecontent:last-child {
+    border-right: none;
+  }
+}
+
+
+.table-header {
+  color: #9b9b9b;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.table-features {  
+  margin: 50px 0 25px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #27ad6c;
+}
+
+.table-item {
+  border-top: 1px solid #e1f1ff;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 15px 0;
+}
+.table-time{
+	opacity: 0.5;
+  font-family: Roboto;
+  font-size: 13px;
+  color: #9b9b9b; 
+}
+
+.table-item:last-child {
+  border-bottom: 1px solid #e1f1ff;
+}
+
+.tableimg{
+	padding-left: 50%;
+	padding-bottom: 100px;
+}
+/*forlogolast*/
+.logoimg{
+	padding-left: 47%;
+	padding-bottom: 100px;
+}
+
+/*=============================For Gallery====================*/
+
+.galleryfull{
+  width: 100%;
+  padding: 50px 0px;
+  background-color: white;
+
+}
+
+.inner-gallery{
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.galleryfull h1{
+  text-align: center;
+  font-family: Roboto;
+  font-size: 48px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #9b9b9b;
+}
+
+
+
+.galleryfull .gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.galleryfull .image{
+  flex: 26%;
+  overflow: hidden;
+  cursor: pointer;
+  size: cover;
+
+}
+
+.galleryfull .image img{
+  width: 100%;
+  height: 50vh;
+  transition: 0.4s;
+  object-fit: cover;  
+}
+
+.galleryfull .image:hover img{
+  transform: scale(1.4) rotate(0deg);
+}
+/*===========================================================*/
+
+
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
